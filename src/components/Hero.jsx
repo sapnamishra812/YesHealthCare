@@ -1,5 +1,5 @@
-import { company } from '../data/siteData'
-
+import { company } from "../data/siteData";
+import { Link } from "react-router-dom";
 function Hero() {
   return (
     <section id="home" className="px-4 py-8 lg:px-8">
@@ -11,24 +11,26 @@ function Hero() {
           <h1 className="text-3xl font-extrabold leading-tight sm:text-5xl">
             {company.legalName}
           </h1>
-          <p className="max-w-lg text-base leading-relaxed text-teal-50">{company.tagline}</p>
+          <p className="max-w-lg text-base leading-relaxed text-teal-50">
+            {company.tagline}
+          </p>
           <p className="max-w-lg text-sm leading-relaxed text-teal-100">
-            Ayurvedic and allopathic tablets, syrups and pain balm — manufactured and supplied
-            through a national distributor network.
+            Ayurvedic and allopathic tablets, syrups and pain balm —
+            manufactured and supplied through a national distributor network.
           </p>
           <div className="flex flex-wrap gap-3">
-            <a
-              href="#products"
+            <Link
+              to="product-catalog"
               className="btn-shine rounded-full bg-white px-6 py-3 text-sm font-bold text-teal-800"
             >
               View medicines
-            </a>
-            <a
-              href="#about"
+            </Link>
+            <Link
+              to="/about"
               className="rounded-full border border-white/40 px-6 py-3 text-sm font-bold text-white hover:bg-white/10"
             >
               Meet the CEO
-            </a>
+            </Link>
           </div>
         </div>
         <div className="relative min-h-[280px]">
@@ -40,7 +42,7 @@ function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Hero
+export default Hero;
