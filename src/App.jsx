@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+
 import Hero from "./components/Hero";
 import AboutCeo from "./components/AboutCeo";
 import Leadership from "./components/Leadership";
@@ -7,11 +8,12 @@ import ProductCatalog from "./components/ProductCatalog";
 import Distributors from "./components/Distributors";
 import CompanyDetails from "./components/CompanyDetails";
 import Footer from "./components/Footer";
+import { Link, Outlet } from "react-router-dom";
 
 function App() {
   return (
     <div className="min-h-screen bg-sand">
-      <Header />
+      {/* <Header />
       <main>
         <Hero />
         <AboutCeo />
@@ -21,7 +23,7 @@ function App() {
         <Distributors />
         <CompanyDetails />
       </main>
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
