@@ -19,18 +19,18 @@ function Hero() {
             manufactured and supplied through a national distributor network.
           </p>
           <div className="flex flex-wrap gap-3">
-            <a
-              href="#products"
+            <Link
+              to="product-catalog"
               className="btn-shine rounded-full bg-white px-6 py-3 text-sm font-bold text-teal-800"
             >
               View medicines
-            </a>
-            <a
-              href="#about"
+            </Link>
+            <Link
+              to="/about"
               className="rounded-full border border-white/40 px-6 py-3 text-sm font-bold text-white hover:bg-white/10"
             >
               Meet the CEO
-            </a>
+            </Link>
           </div>
         </div>
         <div className="relative min-h-[280px]">
