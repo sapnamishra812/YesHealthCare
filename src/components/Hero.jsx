@@ -1,6 +1,8 @@
-import { company } from "../data/siteData";
+// import { company } from "../data/siteData";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 function Hero() {
+  const company = useSelector((state) => state.companyBasicInfo);
   return (
     <section id="home" className="px-4 py-8 lg:px-8">
       <div className="hero-glow mx-auto grid max-w-7xl overflow-hidden rounded-3xl text-white lg:grid-cols-2">

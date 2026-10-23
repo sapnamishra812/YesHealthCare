@@ -1,18 +1,21 @@
-import { productSections } from '../data/siteData'
-import ProductCard from './ProductCard'
+import { useSelector } from "react-redux";
+import ProductCard from "./ProductCard";
 
 function ProductCatalog() {
+  const productSections = useSelector((state) => state.productSectionInfo);
   return (
     <section id="products" className="mx-auto max-w-7xl px-4 py-10 lg:px-8">
       <div className="mb-8">
         <p className="text-sm font-semibold uppercase tracking-widest text-teal-700">
           Product compartments
         </p>
-        <h2 className="text-3xl font-extrabold text-slate-900">Company medicine catalogue</h2>
+        <h2 className="text-3xl font-extrabold text-slate-900">
+          Company medicine catalogue
+        </h2>
         <p className="mt-2 max-w-3xl text-slate-600">
-          Ayurvedic and allopathic tablets, syrups and pain balm. Prices shown are catalogue MRP
-          for this website UI. Always read the pack insert and follow a registered medical
-          practitioner.
+          Ayurvedic and allopathic tablets, syrups and pain balm. Prices shown
+          are catalogue MRP for this website UI. Always read the pack insert and
+          follow a registered medical practitioner.
         </p>
         <div className="mt-5 flex flex-wrap gap-2">
           {productSections.map((section) => (
@@ -21,7 +24,7 @@ function ProductCatalog() {
               href={`#${section.id}`}
               className="rounded-full bg-white px-4 py-2 text-xs font-bold text-teal-800 ring-1 ring-teal-200 hover:bg-teal-700 hover:text-white"
             >
-              {section.title.replace(' medicines', '')}
+              {section.title.replace(" medicines", "")}
             </a>
           ))}
         </div>
@@ -41,7 +44,7 @@ function ProductCatalog() {
         </div>
       ))}
     </section>
-  )
+  );
 }
 
-export default ProductCatalog
+export default ProductCatalog;
